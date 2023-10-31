@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    /*做vw适配*/
+    font-size: calc(100vw/414);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+.main{
+    width: 350rem;
+    height: 350rem;
+    position: relative;
+    background-color: red;
+    margin: 0 auto;
+    overflow:hidden
+}
+.img-list{
+    display: flex;
+    position: absolute;
+    left: -350rem;
+}
+
+.img-list img{
+    width: 350rem;
+    height: 350rem;
+}
+
+.selection-box{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    position: absolute;
+    bottom: 0;left: 0;right: 0;
+    margin: 5rem auto;
+}
+.selection-box li{
+    width: 10rem;
+    height: 10rem;
+    background-color: #a19393;
+    border-radius: 10rem;
+    margin: 0 3rem;
+}
+.selection-box .Move-in-elements{
+    background-color: rgba(47, 134, 236, 0.6);
+    border: #ff0000 1rem solid;
+    box-shadow: 0 0 1rem 1rem rgb(255, 0, 0);
+}

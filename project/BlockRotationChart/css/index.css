@@ -1,0 +1,130 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.Rotation-chart{
+    z-index: 1;
+    margin: auto;
+    position: absolute;
+    top: 0;left: 0;right: 0;bottom: 0;
+
+    width: 900px;
+    height: 500px;
+    /*border: #b3d4fc 4px solid;*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    perspective: 800px;
+}
+
+.cube{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+.cube li{
+    width: 300px;
+    height: 300px;
+    /*opacity: .5;*/
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    line-height: 300px;
+    position: absolute;
+}
+.cube li:nth-child(1){
+    background:url("../img/1.jpg");
+    background-size: contain;
+    transform: translateZ(150px);
+}
+.cube li:nth-child(2){
+    background:url("../img/2.jpg");
+    background-size: contain;
+    transform: translateX(150px) rotateY(90deg);
+}
+.cube li:nth-child(3){
+    background:url("../img/3.jpg");
+    background-size: contain;
+    transform: translateZ(-150px) rotateY(180deg);
+}
+.cube li:nth-child(4){
+    background:url("../img/4.jpg");
+    background-size: contain;
+    transform: translateY(150px) rotateZ(180deg) rotateX(90deg);
+}
+.cube li:nth-child(5){
+    background:url("../img/5.jpg");
+    background-size: contain;
+    transform: translateX(-150px) rotateY(-90deg) rotateZ(-90deg);
+}
+.cube li:nth-child(6){
+    background:url("../img/6.jpg");
+    background-size: contain;
+    transform: translateY(-150px) rotateX(90deg);
+}
+
+
+.arrow div{
+    z-index: 10;
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    text-align:center;
+    cursor: pointer;
+    top: 0;bottom: 0;
+    margin: auto 0;
+    border-radius:10%;
+    background-color: rgba(0,0,0,.15);
+}
+
+.arrow i{
+    font-size: 80px;
+    color: #b3d4fc;
+    line-height: 80px;
+}
+
+.arrow div:hover{
+    background-color: rgba(0,0,0,.7);
+}
+
+.arrow div:nth-child(1){
+    left: 0;
+}
+
+.arrow div:nth-child(2){
+    right: 0;
+}
+
+
+.selection-box{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content:center;
+    right: 0;
+    left: 0;
+}
+
+.selection-box li{
+    width: 60px;
+    height: 12px;
+    background-color: rgba(105,105,105,.6);
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+
+.selection-box .Move-in-elements{
+    background-color: rgba(179,212,252,.6);
+    border: #5f5750 2px solid;
+    box-shadow: 0 0 2px 2px rgb(0,0,0,.5);
+}
